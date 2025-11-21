@@ -5,4 +5,10 @@ const app = express();
 //  res.send('Hello World!')
 //});
 app.use(express.static('public'));
+
+// Serve index.html for the root path
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
 export default app;
