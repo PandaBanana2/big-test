@@ -4,11 +4,10 @@ const app = express();
 //app.get('/', (req, res) => {
 //  res.send('Hello World!')
 //});
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve index.html for the root path
 app.get('/', (req, res) => {
-  console.log('DIR:', __dirname);
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
