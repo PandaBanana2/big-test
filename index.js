@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 //app.get('/', (req, res) => {
 //  res.send('Hello World!')
 //});
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 
 export default app;
