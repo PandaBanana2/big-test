@@ -4,5 +4,5 @@ const app = express();
 //app.get('/', (req, res) => {
 //  res.send('Hello World!')
 //});
-app.use(express.static('public'), {index: true});
+app.use('/', express.static('public'));
 export default app;
