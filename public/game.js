@@ -22,7 +22,7 @@ document.addEventListener('keyup', (event) => {
 
 })
 
-let myDiv = document.getElementById("my-div");
+let myDiv = document.getElementById("rectangle");
 //Detect touch device
 function isTouchDevice() {
   try {
