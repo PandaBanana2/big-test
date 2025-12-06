@@ -22,7 +22,6 @@ document.addEventListener('keyup', (event) => {
 
 })
 
-let myDiv = document.getElementById("rectangle");
 //Detect touch device
 function isTouchDevice() {
   try {
@@ -35,6 +34,9 @@ function isTouchDevice() {
 }
 
 const move = (e) => {
+  let myDiv = document.getElementById("rectangle");
+  console.log("MYDIV: ", myDiv);
+
   //Try, catch to avoid any errors for touch screens (Error thrown when user doesn't move his finger)
   try {
     //PageX and PageY return the position of client's cursor from top left of screen
