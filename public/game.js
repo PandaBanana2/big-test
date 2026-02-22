@@ -6,12 +6,12 @@ function isCollide() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
   console.log("collide");
-    return !(
-        ((styleValue(oval,"top") + styleValue(oval,"height") < (styleValue(rect,"top")) ||
-        (styleValue(oval, "top") > (styleValue(rect,"top") + styleValue(rect,"height")) ||
-        ((styleValue(oval,"left") + styleValue(oval,"width") < styleValue(rect, "left") ||
-        (styleValue(oval,"left") > (styleValue(rect,"left") + styleValue(rect,"width"))
-    );
+  return !(
+    ((styleValue(oval,"top") + styleValue(oval,"height")) < styleValue(rect,"top")) ||
+    (styleValue(oval, "top") > (styleValue(rect,"top") + styleValue(rect,"height"))) ||
+    ((styleValue(oval,"left") + styleValue(oval,"width")) < styleValue(rect, "left")) ||
+    (styleValue(oval,"left") > (styleValue(rect,"left") + styleValue(rect,"width")))
+  );
 }
 
 document.addEventListener('keyup', (event) => {
