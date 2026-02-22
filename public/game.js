@@ -1,16 +1,37 @@
+function isCollide() {
+  const oval = document.getElementById('oval');
+  const rect = document.getElementById('rectangle');
+  console.log("collide");
+    return !(
+        ((oval.y + oval.height) < (rect.y)) ||
+        (oval.y > (rect.y + rect.height)) ||
+        ((oval.x + oval.width) < rect.x) ||
+        (oval.x > (rect.x + rect.width))
+    );
+}
+
 document.addEventListener('keyup', (event) => {
-  const rect = document.getElementById('oval');
+  const oval = document.getElementById('oval');
   if(event.key == 'ArrowUp'){
-    rect.style.top = parseInt(window.getComputedStyle(rect).getPropertyValue('top'),10) - 10 + "px";
+    oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) - 10 + "px";
+    if(isCollide()==true){
+    console.log("collided!")}
 
   } else if(event.key == 'ArrowDown'){
-    rect.style.top = parseInt(window.getComputedStyle(rect).getPropertyValue('top'),10) + 10 + "px";
+    oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) + 10 + "px";
+      if(isCollide()==true){
+        console.log("collided!")}
 
   } else if(event.key == 'ArrowLeft'){
-    rect.style.left = parseInt(window.getComputedStyle(rect).getPropertyValue('left'),10) - 10 + "px";
+    oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) - 10 + "px";
+      if(isCollide()==true){
+     console.log("collided!")}
 
   } else if(event.key == 'ArrowRight'){
-    rect.style.left = parseInt(window.getComputedStyle(rect).getPropertyValue('left'),10) + 10 + "px";
+    oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) + 10 + "px";
+    if(isCollide()==true){
+     console.log("collided!")}
+
   }
 })
 
@@ -38,6 +59,10 @@ const move = (e) => {
   //set left and top of div based on mouse position
   rect.style.left = x - 50 + "px";
   rect.style.top = y - 50 + "px";
+if(isCollide()==true){
+     console.log("collided!")}
+
+
 };
 
 //For mouse
@@ -49,5 +74,8 @@ if (isTouchDevice) {
   //For touch
   document.addEventListener("touchmove", (e) => {
     move(e);
-  });
+});
+
 }
+
+
