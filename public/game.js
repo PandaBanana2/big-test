@@ -1,12 +1,16 @@
+function styleValue(element,label){
+  return parseInt(window.getComputedStyle(element).getPropertyValue(label),10);
+}
+
 function isCollide() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
   console.log("collide");
     return !(
-        ((oval.y + oval.height) < (rect.y)) ||
-        (oval.y > (rect.y + rect.height)) ||
-        ((oval.x + oval.width) < rect.x) ||
-        (oval.x > (rect.x + rect.width))
+        ((styleValue(oval,"top") + styleValue(oval,"height") < (styleValue(rect,"top")) ||
+        (styleValue(oval, "top") > (styleValue(rect,"top") + styleValue(rect,"height")) ||
+        ((styleValue(oval,"left") + styleValue(oval,"width") < styleValue(rect, "left") ||
+        (styleValue(oval,"left") > (styleValue(rect,"left") + styleValue(rect,"width"))
     );
 }
 
