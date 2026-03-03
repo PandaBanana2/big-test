@@ -5,7 +5,6 @@ function styleValue(element,label){
 function isCollide() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
-  console.log("collide");
   return !(
     ((styleValue(oval,"top") + styleValue(oval,"height")) < styleValue(rect,"top")) ||
     (styleValue(oval, "top") > (styleValue(rect,"top") + styleValue(rect,"height"))) ||
@@ -19,22 +18,21 @@ document.addEventListener('keyup', (event) => {
   if(event.key == 'ArrowUp'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) - 10 + "px";
     if(isCollide()==true){
-    console.log("collided!")}
+      let ovalColor = syleValue(oval, "background-color")
+      styleValue(oval, "background-color") = styleValue(rect, "background-color")
+      styleValue(rect, "background-color") = ovalColor
 
   } else if(event.key == 'ArrowDown'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) + 10 + "px";
       if(isCollide()==true){
-        console.log("collided!")}
 
   } else if(event.key == 'ArrowLeft'){
     oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) - 10 + "px";
       if(isCollide()==true){
-     console.log("collided!")}
 
   } else if(event.key == 'ArrowRight'){
     oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) + 10 + "px";
     if(isCollide()==true){
-     console.log("collided!")}
 
   }
 })
