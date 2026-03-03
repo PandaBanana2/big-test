@@ -13,26 +13,31 @@ function isCollide() {
   );
 }
 
+function handleCollision() {
+  const oval = document.getElementById('oval');
+  const rect = document.getElementById('rectangle');
+      let ovalColor = syleValue(oval, "background-color")
+      styleValue(oval, "background-color") = styleValue(rect, "background-color")
+      styleValue(rect, "background-color") = ovalColor
+}
+
 document.addEventListener('keyup', (event) => {
   const oval = document.getElementById('oval');
   if(event.key == 'ArrowUp'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) - 10 + "px";
-    if(isCollide()==true){
-      let ovalColor = syleValue(oval, "background-color")
-      styleValue(oval, "background-color") = styleValue(rect, "background-color")
-      styleValue(rect, "background-color") = ovalColor
+    if(isCollide()) { handleCollision() }
 
   } else if(event.key == 'ArrowDown'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) + 10 + "px";
-      if(isCollide()==true){
+    if(isCollide()) { handleCollision() }
 
   } else if(event.key == 'ArrowLeft'){
     oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) - 10 + "px";
-      if(isCollide()==true){
+    if(isCollide()) { handleCollision() }
 
   } else if(event.key == 'ArrowRight'){
     oval.style.left = parseInt(window.getComputedStyle(oval).getPropertyValue('left'),10) + 10 + "px";
-    if(isCollide()==true){
+    if(isCollide()) { handleCollision() }
 
   }
 })
