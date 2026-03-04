@@ -19,13 +19,15 @@ function handleCollision() {
       let ovalColor = syleValue(oval, "background-color")
       styleValue(oval, "background-color") = styleValue(rect, "background-color")
       styleValue(rect, "background-color") = ovalColor
+      console.log(styleValue(oval, "background-color")
 }
 
 document.addEventListener('keyup', (event) => {
   const oval = document.getElementById('oval');
   if(event.key == 'ArrowUp'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) - 10 + "px";
-    if(isCollide()) { handleCollision() }
+    if(isCollide()) { handleCollision()
+      console.log("hi")
 
   } else if(event.key == 'ArrowDown'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) + 10 + "px";
