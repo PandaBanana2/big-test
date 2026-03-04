@@ -19,7 +19,7 @@ function handleCollision() {
       let ovalColor = syleValue(oval, "background-color")
       styleValue(oval, "background-color") = styleValue(rect, "background-color")
       styleValue(rect, "background-color") = ovalColor
-      console.log(styleValue(oval, "background-color")
+      console.log(styleValue(oval, "background-color"))
 }
 
 document.addEventListener('keyup', (event) => {
