@@ -16,10 +16,10 @@ function isCollide() {
 function handleCollision() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
-      let ovalColor = oval.style["background-color"]
-      oval.style["background-color"] = rect.style["background-color"];
-      rect.style["background-color"] = ovalColor
-      console.log(oval.style["background-color"])
+      let ovalColor = oval.style.backgroundColor
+      oval.style.backgroundColor = rect.style.backgroundColor;
+      rect.style.backgroundColor = ovalColor
+      console.log(oval.style.backgroundColor)
 }
 
 document.addEventListener('keyup', (event) => {
@@ -68,9 +68,6 @@ const move = (e) => {
   //set left and top of div based on mouse position
   rect.style.left = x - 50 + "px";
   rect.style.top = y - 50 + "px";
-if(isCollide()==true){
-     console.log("collided!")}
-
 
 };
 
