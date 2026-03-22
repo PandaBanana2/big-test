@@ -19,6 +19,7 @@ function handleCollision() {
   console.log("o", oval, "-", document.getElementById('oval'));
   const rect = document.getElementById('rectangle');
   const ovalColor = oval.style.backgroundColor
+  console.log('oc', ovalColor, '-', oval.style.backgroundColor);
   oval.style.backgroundColor = rect.style.backgroundColor;
   rect.style.backgroundColor = ovalColor
   console.log(rect)
