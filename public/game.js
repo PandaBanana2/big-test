@@ -14,7 +14,7 @@ function isCollide() {
 }
 
 function handleCollision() {
-  console.log("handelCollison is working!:)
+  console.log("handelCollison is working!")
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
       let ovalColor = oval.style.backgroundColor
