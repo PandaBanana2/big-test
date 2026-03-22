@@ -28,7 +28,7 @@ document.addEventListener('keyup', (event) => {
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) - 10 + "px";
     if(isCollide()) { handleCollision()
       console.log("hi")
-
+    }
   } else if(event.key == 'ArrowDown'){
     oval.style.top = parseInt(window.getComputedStyle(oval).getPropertyValue('top'),10) + 10 + "px";
     if(isCollide()) { handleCollision() }
