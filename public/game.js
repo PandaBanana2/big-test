@@ -14,12 +14,15 @@ function isCollide() {
 }
 
 function handleCollision() {
+  console.log("handelCollison is working!:)
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
       let ovalColor = oval.style.backgroundColor
       oval.style.backgroundColor = rect.style.backgroundColor;
       rect.style.backgroundColor = ovalColor
-      console.log(oval.style.backgroundColor)
+      console.log(oval)
+      console.log(rect)
+      console.log(oval.style.backgroundColor, "color")
 }
 
 document.addEventListener('keyup', (event) => {
