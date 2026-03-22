@@ -16,10 +16,10 @@ function isCollide() {
 function handleCollision() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
-      let ovalColor = styleValue(oval, "background-color")
-      styleValue(oval, "background-color") = styleValue(rect, "background-color")
-      styleValue(rect, "background-color") = ovalColor
-      console.log(styleValue(oval, "background-color"))
+      let ovalColor = oval.style["background-color"]
+      oval.style["background-color"] = rect.style["background-color"];
+      rect.style["background-color"] = ovalColor
+      console.log(oval.style["background-color"])
 }
 
 document.addEventListener('keyup', (event) => {
