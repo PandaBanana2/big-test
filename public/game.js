@@ -16,7 +16,7 @@ function isCollide() {
 function handleCollision() {
   const oval = document.getElementById('oval');
   const rect = document.getElementById('rectangle');
-      let ovalColor = syleValue(oval, "background-color")
+      let ovalColor = styleValue(oval, "background-color")
       styleValue(oval, "background-color") = styleValue(rect, "background-color")
       styleValue(rect, "background-color") = ovalColor
       console.log(styleValue(oval, "background-color"))
