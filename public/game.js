@@ -20,9 +20,9 @@ function handleCollision() {
   const rect = document.getElementById('rectangle');
   const ovalColor = window.getComputedStyle(oval).getPropertyValue('background-color');
   console.log('oc', ovalColor, '-', oval.style.backgroundColor);
-  oval.style.backgroundColor = window.getComputedStyle(rect).getPropertyValue('background-color')
-  rect.style.backgroundColor = ovalColor
-  console.log(oval.style.backgroundColor, "color")
+  oval.style.backgroundColor = window.getComputedStyle(rect).getPropertyValue('background-color');
+  rect.style.backgroundColor = ovalColor;
+  console.log(oval.style.backgroundColor, "color");
 }
 
 document.addEventListener('keyup', (event) => {
